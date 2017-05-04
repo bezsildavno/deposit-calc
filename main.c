@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 int amount_of_income(int length, int dep_amount) {
 	int cashback;
@@ -49,7 +50,7 @@ printf("enter dep_amount to deposit: \n");
 scanf("%d", &dep_amount);
 n = data(length);
 if (n==0) printf("Error: Incorrect length. \n");
-n=money(dep_amount)
+n=money(dep_amount);
 if (n==0) printf("Error: Incorrect dep_amount \n"); 
 printf("dep_amount at the end of: ");
 printf("%d \n", amount_of_income(length, dep_amount));
