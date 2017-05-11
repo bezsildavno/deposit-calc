@@ -1,6 +1,6 @@
 CFLAGS = -Wall -Werror -MP -MMD
 
-.PH: clean deposit-calc
+.PHONY: clean deposit-calc
 
 bin/deposit-calc : build/main.o build/deposit.o
 	gcc build/main.o build/deposit.o -o bin/deposit-calc $(CFLAGS)
