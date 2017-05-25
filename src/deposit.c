@@ -31,18 +31,8 @@ int amount_of_income(int length, int dep_amount) {
 	return cashback;
 }
 
-int data(int length)
-{
-	if ((length >= 0) && (length <= 365))
-		return 1;
-	else 
-		return 0;
-}
-
-int money(int dep_amount)
-{
-	if (dep_amount >= 10000) 
-		return 1;
-	else 
-		return 0;
+int checkdata(int lenght, int dep_amount){
+    if ((lenght <= 0) || (lenght > 365) || (dep_amount < 10000))
+        return 0;
+else return 1;
 }
