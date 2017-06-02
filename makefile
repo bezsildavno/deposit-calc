@@ -6,13 +6,13 @@ all :
 	make bin/deposit-calc bin/deposit-calc-test
 
 bin/deposit-calc : build/main.o build/deposit.o
-	gcc build/main.o build/deposit.o -o bin/deposit-calc $(CFLAGS)
+	gcc build/main.o build/deposit.o -o bin/deposit-calc -coverage $(CFLAGS)
 
 build/main.o : src/main.c src/deposit.h
-	gcc -c src/main.c -o build/main.o $(CFLAGS)
+	gcc -c src/main.c -o build/main.o -coverage $(CFLAGS)
 
 build/deposit.o : src/deposit.c src/deposit.h
-	gcc -c src/deposit.c -o build/deposit.o $(CFLAGS)
+	gcc -c src/deposit.c -o build/deposit.o -coverage $(CFLAGS)
 
 test :
 	make bin/deposit-calc-test
