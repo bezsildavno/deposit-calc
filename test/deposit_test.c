@@ -4,7 +4,7 @@
 CTEST(checkdata, test_day199_sum39999)
 {
     // When
-    int result = checkdata (39999,199);
+    int result = checkdata (199,39999);
 
     // Then
     int expected = 1;
